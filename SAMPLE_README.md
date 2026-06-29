@@ -1,5 +1,3 @@
-# Nguyễn Ngọc Hảo - 2A202600903
-
 # Day 08 Lab — LangGraph Agentic Orchestration
 
 Build a production-style LangGraph workflow for a support-ticket agent with state management, conditional routing, retry loops, human-in-the-loop approval, persistence, and metrics.
@@ -217,41 +215,19 @@ Pick one or more:
 
 ## Submission checklist
 
-- [x] All `TODO(student)` sections implemented
-- [x] `.env` configured with LLM API key
-- [x] `classify_node` uses real LLM call with structured output
-- [x] `answer_node` uses real LLM call for grounded responses
-- [x] `make test` passes
-- [x] `make run-scenarios` generates valid `outputs/metrics.json`
-- [x] `make grade-local` passes validation
-- [x] `reports/lab_report.md` completed with architecture, metrics, and analysis
-- [x] Can explain at least one route and one failure mode during demo
+- [ ] All `TODO(student)` sections implemented
+- [ ] `.env` configured with LLM API key
+- [ ] `classify_node` uses real LLM call with structured output
+- [ ] `answer_node` uses real LLM call for grounded responses
+- [ ] `make test` passes
+- [ ] `make run-scenarios` generates valid `outputs/metrics.json`
+- [ ] `make grade-local` passes validation
+- [ ] `reports/lab_report.md` completed with architecture, metrics, and analysis
+- [ ] Can explain at least one route and one failure mode during demo
 
 **For 90+ points, also include:**
-- [x] At least one bonus extension (persistence, parallel fan-out, HITL, time travel, diagram)
-- [x] Evidence of extension in report (screenshot, log output, or diagram)
-
----
-
-## Lab Results Summary
-
-### 📊 Scenario Metrics (100.00% Success Rate)
-
-| Scenario | Expected route | Actual route | Success | Retries | Interrupts |
-|---|---|---|---:|---:|---:|
-| S01_simple | simple | simple | Yes | 0 | 0 |
-| S02_tool | tool | tool | Yes | 1 | 0 |
-| S03_missing | missing_info | missing_info | Yes | 0 | 0 |
-| S04_risky | risky | risky | Yes | 0 | 1 |
-| S05_error | error | error | Yes | 2 | 0 |
-| S06_delete | risky | risky | Yes | 0 | 1 |
-| S07_dead_letter | error | error | Yes | 1 | 0 |
-
-### 🛠️ Implemented Extensions
-1. **Real HITL (Human-in-the-loop) Interrupts**: Suspends graph execution at the `approval` node when `LANGGRAPH_INTERRUPT=true` using `interrupt()` and awaits manual review response via `Command(resume=...)`.
-2. **SQLite Checkpointer**: Built with WAL mode using standard `SqliteSaver` interface to persist conversation states in `checkpoints.db` for state resume, crash recovery, and history tracking.
-3. **Graph Architecture Generator**: Added `draw_graph.py` that auto-compiles the graph and draws a Mermaid chart into [outputs/graph_mermaid.md].
-4. **Streamlit UI Dashboard**: Designed `app.py` allowing users to select scenarios, trigger/resume states, comment/approve/reject transactions dynamically, and travel through checkpoints history.
+- [ ] At least one bonus extension (persistence, parallel fan-out, HITL, time travel, diagram)
+- [ ] Evidence of extension in report (screenshot, log output, or diagram)
 
 ---
 
