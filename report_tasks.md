@@ -195,6 +195,9 @@ Dưới đây là bảng tổng hợp kết quả chi tiết của 7 kịch bả
 ### B. Đánh giá & Phân tích kết quả
 - **Đồ thị Mermaid chính xác:** Tệp kết xuất [outputs/graph_mermaid.md] thể hiện đầy đủ cấu trúc thiết kế 11 node và các luồng rẽ nhánh điều kiện tuần hoàn. Sơ đồ này hiển thị một cách trực quan cấu trúc của luồng nghiệp vụ.
 - **Giải pháp Streamlit UI mạnh mẽ:** Mã nguồn giao diện sử dụng đúng các cơ chế cập nhật trạng thái và tiếp tục chạy của LangGraph thông qua checkpoint database, tách biệt rõ ràng giữa pha chạy thường và pha phản hồi phê duyệt, mang lại trải nghiệm người dùng tối ưu khi vận hành ticket thực tế.
+- **Minh chứng Tracing trên LangSmith:** Đã bổ sung hình ảnh vết chạy thực tế (tracing log) ghi nhận trên LangSmith làm minh chứng cho việc tích hợp thành công:
+
+![LangSmith Trace Log](outputs/image.png)
 
 ---
 
@@ -206,7 +209,7 @@ Dưới đây là bảng tổng hợp kết quả chi tiết của 7 kịch bả
 4. Tích hợp checkpointer SQLite với WAL mode lưu trữ trạng thái bền vững trong [persistence.py].
 5. Thực thi 7 kịch bản kịch mẫu đạt tỉ lệ thành công **100% tuyệt đối** qua chấm điểm cục bộ (`grade-local`) và xuất báo cáo tự động tại [reports/lab_report.md].
 6. Phát triển thêm 3 tính năng nâng cao (Real HITL, draw_graph Mermaid generator, và Streamlit UI Dashboard).
-7. Thực hiện chuẩn hóa tài liệu: Đổi tên tài liệu gốc sang [SAMPLE_README.md](file:///Users/haongocng/Vin/phase2-track3-day8-langgraph-agent/SAMPLE_README.md) và tạo tài liệu mới [README.md](file:///Users/haongocng/Vin/phase2-track3-day8-langgraph-agent/README.md) có ghi nhận đầy đủ thông tin sinh viên thực hiện: **Nguyễn Ngọc Hảo, MSSV: 2A202600903**.
-8. Cập nhật bảng kiểm checklist đầu bài (`Submission checklist`) và bổ sung phần tổng hợp kết quả độ đo kịch bản (`Lab Results Summary`) trực tiếp vào tệp [README.md](file:///Users/haongocng/Vin/phase2-track3-day8-langgraph-agent/README.md).
+7. Thực hiện chuẩn hóa tài liệu: Đổi tên tài liệu gốc sang [SAMPLE_README.md] và tạo tài liệu mới [README.md] có ghi nhận đầy đủ thông tin sinh viên thực hiện: **Nguyễn Ngọc Hảo, MSSV: 2A202600903**.
+8. Cập nhật bảng kiểm checklist đầu bài (`Submission checklist`) và bổ sung phần tổng hợp kết quả độ đo kịch bản (`Lab Results Summary`) trực tiếp vào tệp [README.md].
 
 

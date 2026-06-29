@@ -253,6 +253,9 @@ Pick one or more:
 3. **Graph Architecture Generator**: Added `draw_graph.py` that auto-compiles the graph and draws a Mermaid chart into [outputs/graph_mermaid.md].
 4. **Streamlit UI Dashboard**: Designed `app.py` allowing users to select scenarios, trigger/resume states, comment/approve/reject transactions dynamically, and travel through checkpoints history.
 
+#### 📸 LangSmith Trace Log Evidence
+![LangSmith Trace Log](outputs/image.png)
+
 ---
 
 ## Common pitfalls

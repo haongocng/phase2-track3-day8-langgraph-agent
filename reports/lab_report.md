@@ -80,6 +80,11 @@ Hoàn thành tích hợp checkpointer SQLite:
 - Cài đặt thư viện `langgraph-checkpoint-sqlite`.
 - Triển khai lớp `SqliteSaver` kết hợp cấu hình `sqlite3.connect` và bật chế độ **WAL mode** giúp tối ưu hóa hiệu suất đọc ghi đồng thời của tệp checkpoint database.
 
+### 📸 Minh chứng Tracing & Extension (LangSmith Trace Log)
+Dưới đây là hình ảnh vết chạy thực tế (tracing log) được ghi nhận trên LangSmith:
+
+![LangSmith Trace Log](../outputs/image.png)
+
 ## 8. Improvement plan
 
 Nếu có thêm thời gian, Ưu tiên tối ưu hóa sản phẩm ở các phần sau:
